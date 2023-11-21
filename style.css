@@ -1,0 +1,322 @@
+*{ 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: transparent;
+    border: none;
+    list-style: none;
+   
+}
+
+:root {
+  --purple1:#270082;
+  --purple2:#1b0058;
+  --purple3:#281154;
+}
+a {
+    text-decoration: none;
+}
+/* =============HEADER START============= */
+header {
+    background-color:var(--purple1);
+    color:white;
+    position: sticky;
+    top:0;
+    z-index: 100;
+    padding: 1rem 3rem;
+
+}
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; 
+    padding: 1rem 0;
+}
+.logo{
+    font-size: 32px;
+    font-weight: 600;
+    /* margin: 0 2rem; */
+}
+.list-items{
+    display: flex;
+    gap: 3rem;  
+    list-style: none;
+
+}
+.item {
+    color: white;
+    border-bottom: 2px solid transparent; 
+    transition:border 0.3s ;
+}
+
+.item:hover {  
+  border-bottom: 2px solid white; 
+}
+
+
+.hamburger-menu {
+    display: none;
+    font-size: 35px;
+  }
+  @media screen and (max-width: 650px) {
+    header {
+      padding: 5px 10px;
+    }
+    .navbar .logo {
+      font-size: 35px;
+    }
+    .navbar .list-items{
+      gap: 10px;
+      display: none;
+    }
+    .hamburger-menu {
+      display: flex;
+    }
+  }
+
+@media screen and (max-width:650) {
+    header {
+        padding: 5px 10px;
+
+    }
+    .logo {
+    font-size: 25px;
+    }
+    .list-items {
+        gap: 10px;
+    }
+}
+
+
+
+/* =============HEADER END============= */
+ /* =============SECTIONS START=============  */
+ /* 1.section */
+ .container {
+    background-image: url(myTunes-images/hero_image.png);
+    height: 100vh;
+    background-size: cover;
+    color:white;
+    display: grid;
+    place-items:center ; 
+    text-align: center;   
+    background-repeat: no-repeat;
+   
+ 
+ }
+ .section_container h1,h3,p {
+  padding-bottom: 2rem;
+  
+ }
+ .section_container div h1{
+    font-size: 95px;
+ }
+ .section_container div h3{
+    font-size: 32px;
+ }
+ .section_container p{
+    max-width: 900px;
+ }
+/* 2.section */
+.middle {
+    background-color: var(--purple3);
+    color:white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center ;
+    padding: 40px auto;
+    gap:30px;
+}
+.music {
+    display: flex;
+    font-size: 20px;
+    padding-top:40px;
+}
+.btn-music {
+    background-color:#4701e9;
+    color:white;
+    padding: 10px 20px;
+    transition: all 0.3s;
+    cursor: pointer;
+}
+.btn-music:hover {
+    transform: scale(0.96);    
+}
+
+.ipad-image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.3s;
+
+}
+.ipad-image {
+    max-width: 700px;
+}
+
+/* @media screen and (max-width:600px) {
+    .ipad-image {
+        width: 300px;
+    }
+    
+} */
+@media screen and (max-width: 1050px) {
+    .middle .ipad-image img{
+      width: 650px;
+    }
+  }
+@media screen and (max-width: 700px) {
+    .middle .ipad-image img {
+      width: 400px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .middle .ipad-image img{
+      width: 200px;
+    }
+  }
+/* 3.section */
+.mac {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
+    text-align: center; 
+    padding: 50px 5px 20px 10px;
+}
+
+
+  .mac img {
+    max-width: 700px;
+  }
+  .mac p {
+    margin:10px;
+    max-width: 900px;
+  }
+  /* 4.section */
+  .concert {
+  background-image: url(myTunes-images/video.png);
+  min-height: 700px;
+  padding: 0 20px;
+  color: white;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  }
+
+  .paragraf {
+    padding-top: 50px;
+    max-width: 900px;
+  }
+
+  @media screen and (max-width: 800px) {
+    .mac img {
+      width: 550px;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .mac img {
+      width: 400px;
+    }
+  }
+
+  /* 5.section */
+  .gift {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    justify-content: center;
+    padding: 20px;
+    gap: 30px;
+ 
+
+  }
+  .card {
+    margin-bottom: 5px;
+  }
+
+  .gift-card {
+    padding: 15px 5px;
+    margin-left:20%;
+  }
+
+  .gift-title{
+    display: flex;
+    flex-direction: column;
+    gap:5px;
+    justify-content: start;
+    align-items: center;
+    margin-top: 50px;
+    margin-right:20%;  
+    max-width: 700px; 
+  }
+.line {
+ border-bottom: 1px solid gray;
+ padding: 10px 5px;
+ margin-bottom: 20px
+}
+.gift-btn {  
+    padding: 10px 10%;
+    background-color:#4701e9;
+    color:white;  
+    transition: all 0.3s;
+    cursor: pointer;
+}
+@media screen and (max-width: 1170px) {
+    .gift {
+    grid-template-columns:none;
+    justify-content: center;
+    align-items: center;
+    row-gap: 50px;
+
+    }
+
+
+    .gift-card {
+        margin-left: 0%;
+        padding-left:35px; 
+    }
+    .gift-title {
+        margin-left:10%;
+        padding-left:25px;
+    }
+  }
+
+  /* =============SECTIONS END=============  */
+
+   /* =============FOOTER START=============  */
+
+
+footer h5 {
+    padding: 5px;
+}
+footer .up {
+    display: flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: #1b0058;
+    color:rgb(148, 25, 236);
+    padding: 30px 50px;  
+    text-align: center;
+}
+footer .up li a {
+   color:white;
+    list-style-type: none;
+}
+footer .down{
+    background-color: #1b0058;
+    color: white;
+    text-align: center;
+}
+
+@media screen and (max-width: 750px) {
+   footer .up {
+     display: grid;
+     grid-template-columns:repeat(2,1fr) ;
+
+    }
+
+  }
+   /* =============FOOTER END=============  */
+
+  
